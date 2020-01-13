@@ -11,8 +11,10 @@ pipeline {
             }
         }
 	stage('test') {
-	    echo 'This is the test stage'
-	    sh 'uptime'
+	    steps {
+	        echo 'This is the test stage'
+	        sh 'uptime'
+	    }
 	}
     }
     post {
